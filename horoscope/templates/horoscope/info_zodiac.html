@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Гороскоп для {{sign|title}}
+
+{% endblock %}
+{% block content %}
+    {% if description_zodiac is None %}
+        <h2>Неправильный знак зодиака - {{sign|capfirst}}</h2>
+    {% else %}
+        <h2> {{ description_zodiac }} </h2>
+    {% endif %}
+{% endblock %}
+
+<!--    <p>{{my_float}}</p>-->
+<!--    <p>{{my_list}}</p>-->
+<!--    <p>Словарь {{my_dict}}, ключ {{my_dict.name}}</p>-->
+<!--    <p>{{my_tuple}}</p>-->
+<!--    <p>{{my_class}} {{my_class.age}}</p>-->
+<!--|capfirst-->
+<!--|upper-->
+<!--|title-->
+<!--my_float|add"100"-->
