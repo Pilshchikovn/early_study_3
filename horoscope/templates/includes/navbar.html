@@ -1,0 +1,12 @@
+<nav>
+    <a href="{% url 'horoscope-index'%}">Главная</a>
+<!--    <a href="/horoscope">Главная</a>-->
+    <a href="https://www.youtube.com/watch?v=Z6WWQAaEkEA">Источник</a>
+</nav>
+
+    {% for i in zodiacs %}
+    | <a href="{%url 'horoscope-name' sign_zodiac=i%}"> {{i.title}}</a>
+    {% endfor %}
+
+
+<!--    <p>переменная sign = {{sign|capfirst}} </p>-->
